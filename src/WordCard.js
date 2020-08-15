@@ -12,6 +12,7 @@ const prepareStateFromWord = (given_word) => {
     attempt: 1,
     guess: "",
     completed: false,
+    score: 0,
   };
 };
 
@@ -24,7 +25,12 @@ export default function WordCard(props) {
     let guess = state.guess + c;
     setState({ ...state, guess });
 
-    document.getElementById("addText").innerHTML = guess;
+    document.getElementById("enter").addEventListener("click", function () {
+      document.getElementById("addText").textContent = guess + " ";
+      state.score += guess.length;
+      document.getElementById("addScore").textContent = state.score;
+      setState({ ...state, guess: "" });
+    });
 
     /* if (guess.length == state.word.length) {
       if (guess == state.word) {

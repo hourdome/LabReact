@@ -10,7 +10,8 @@ function App() {
     <div>
       <header className="textAlign">
         <h1>Enter any word to get the most points.</h1>
-        <h2>Score : </h2>
+        <h2>Score</h2>
+        <h2 id="addScore"></h2>
         <p className="textAlign" id="addText"></p>
       </header>
       {<WordCard value={letter} />}
