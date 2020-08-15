@@ -26,10 +26,10 @@ export default function WordCard(props) {
     setState({ ...state, guess });
 
     document.getElementById("enter").addEventListener("click", function () {
-      document.getElementById("addText").textContent = guess + " ";
+      document.getElementById("addText").textContent = guess;
       state.score += guess.length;
       document.getElementById("addScore").textContent = state.score;
-      setState({ ...state, guess: "" });
+      setState({ ...state, guess: "", attempt: state.attempt + 1 });
     });
 
     /* if (guess.length == state.word.length) {
