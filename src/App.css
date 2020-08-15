@@ -3,12 +3,33 @@
   text-align: center;
   width: 3em;
   font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 1em;
   user-select: none;
- }
+}
 
- .activeCard {
-   color: lightcoral;
-   background: lightblue;
- }
+.activeCard {
+  color: lightcoral;
+  background: lightblue;
+}
+
+.box {
+  display: inline-block;
+  box-shadow: 0 500px 1000px 0 rgba(0, 0, 0, 0.2);
+}
+
+.textAlign {
+  text-align: center;
+}
+
+.bt {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  background-color: grey;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px 250px;
+  cursor: pointer;
+}

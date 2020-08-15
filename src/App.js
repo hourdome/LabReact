@@ -1,15 +1,18 @@
-import React from 'react';
-import './App.css';
-import CharacterCard from './CharacterCard';
-import WordCard from './WordCard';
+import React from "react";
+import "./App.css";
+import CharacterCard from "./CharacterCard";
+import WordCard from "./WordCard";
 
-const word =  "Hello";
+const letter = "abcdefghijklmnopqrstuvwxyz";
+
 function App() {
   return (
     <div>
-      {
-        <WordCard value={word}/>
-      }
+      <header>
+        <h1 className="textAlign">Will equate as many words as possible</h1>
+      </header>
+      {<WordCard value={letter} />}
+      <button className="bt">Enter</button>
     </div>
   );
 }
