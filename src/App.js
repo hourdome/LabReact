@@ -8,11 +8,16 @@ const letter = "abcdefghijklmnopqrstuvwxyz";
 function App() {
   return (
     <div>
-      <header>
-        <h1 className="textAlign">Will equate as many words as possible</h1>
+      <header className="textAlign">
+        <h1>Enter any word to get the most points.</h1>
+        <h2>Score : </h2>
+        <p className="textAlign" id="addText"></p>
       </header>
       {<WordCard value={letter} />}
-      <button className="bt">Enter</button>
+
+      <button className="bt" id="enter">
+        Enter
+      </button>
     </div>
   );
 }

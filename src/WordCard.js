@@ -24,7 +24,9 @@ export default function WordCard(props) {
     let guess = state.guess + c;
     setState({ ...state, guess });
 
-    if (guess.length == state.word.length) {
+    document.getElementById("addText").innerHTML = guess;
+
+    /* if (guess.length == state.word.length) {
       if (guess == state.word) {
         console.log("yeah!");
         setState({ ...state, guess: "", completed: true });
@@ -32,8 +34,9 @@ export default function WordCard(props) {
         console.log("reset, next attempt");
         setState({ ...state, guess: "", attempt: state.attempt + 1 });
       }
-    }
+    } */
   };
+
   return (
     <div>
       {state.chars.map((c, i) => (
